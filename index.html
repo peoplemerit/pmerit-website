@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMERIT - Empowering Skills</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header sticky">
+        <h1 class="site-title">PMERIT</h1>
+        <nav class="nav">
+            <button class="menu-icon" onclick="toggleMenu()">☰</button>
+            <div id="nav-links" class="nav-links hidden">
+                <a href="#about">About Us</a>
+                <a href="#resources">Resources</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h2>Empower Your Skills with PMERIT</h2>
+        <p>Learn practical skills and access resources to build a better future.</p>
+        
+        <!-- AI Help Button -->
+        <button id="ai-help-btn" class="ai-help-btn" onclick="toggleAiPanel()">AI Help</button>
+
+        <!-- AI Help Panel (hidden by default) -->
+        <div id="ai-panel" class="ai-panel hidden">
+            <h3>AI Assistant</h3>
+            <textarea id="user-query" rows="3" placeholder="Ask me anything..."></textarea>
+            <button class="submit-btn" onclick="submitQuery()">Submit</button>
+            <div id="ai-response" class="ai-response"></div>
+        </div>
+
+        <!-- Search Box -->
+        <input type="text" id="search-box" placeholder="Search...">
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#privacy">Privacy</a>
+            <a href="#terms">Terms</a>
+        </div>
+        <p>© 2025 PMERIT. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
