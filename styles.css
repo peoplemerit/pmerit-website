@@ -5,9 +5,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f3f4f6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Sticky Header */
@@ -71,24 +68,4 @@ body {
     .nav-links.active {
         transform: translateX(0);
     }
-}
-
-/* AI Help Button */
-.ai-help-btn {
-    background-color: #1e3a8a;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.ai-panel {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 300px;
-    margin: 20px auto;
 }
