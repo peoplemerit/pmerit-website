@@ -1,153 +1,194 @@
-/* ---------------------------------------
-   Make page non-scrollable
------------------------------------------ */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Hide scrollbars */
-}
-
 body {
-  font-family: sans-serif;
-  /* Background image for the entire page */
-  background: url("https://images.unsplash.com/photo-1465146633011-14fbaab74493") no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0; /* Remove padding from body */
+    background-color: #f0f0f0;
 }
 
-/* ---------------------------------------
-   Header and Footer
------------------------------------------ */
-header, footer {
-  flex: 0 0 auto;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 8px;
+/* Mission Statement Styling */
+.mission-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Center the nav links horizontally */
+/* Homepage Features Styling */
+.homepage-features {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.chatbot-placeholder,
+.image-to-text-placeholder {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Button Container Styling */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Container Styling */
+/* ... (previous CSS code) ... */
+
+/* Form Container Styling */
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: left; /* Align form content to the left */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ... (rest of the CSS code) ... */
+input[type="text"],
+input[type="date"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Header and Footer Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-  display: inline-block;
-  margin: 0 10px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 nav a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* ---------------------------------------
-   Main Content
------------------------------------------ */
-main {
-  flex: 1 1 auto;
-  overflow: hidden; /* Prevent scrolling */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content boxes horizontally */
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-/* 
-   A reusable class for content sections 
-   (Mission, AI Tutor, Personality, etc.)
-*/
-.content-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 80%;
-  max-width: 600px;
-  margin: 10px 0;         /* Spacing between boxes */
-  padding: 15px;          /* Inner spacing */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;     /* Center text inside the box */
-}
-
-.content-box h2 {
-  margin-top: 0;          /* Remove default top margin */
-  font-size: 1.25rem;
-  color: #333;
-}
-
-.content-box p,
-.content-box li {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #444;
-}
-
-/* 
-   For the <iframe> inside the AI Tutor box
-   (width is 100% set inline, so only height here)
-*/
-.content-box iframe {
-  display: block;
-  margin: 10px auto 0 auto; /* Slight spacing above the iframe */
-}
-
-/* ---------------------------------------
-   Button Container
------------------------------------------ */
-.button-container {
-  text-align: center;
-  margin: 10px;
-}
-
-.button-container button {
-  background-color: #3498db;
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.95rem;
-}
-
-.button-container button:hover {
-  background-color: #2980b9;
-}
-
-/* ---------------------------------------
-   Footer
------------------------------------------ */
-footer p {
-  margin: 0;
-  font-size: 0.85rem;
-}
-
-/* ---------------------------------------
-   Responsive Tweaks
------------------------------------------ */
-@media (max-width: 600px) {
-  .content-box {
-    width: 90%;
+footer {
+    background-color: #333;
+    color: #fff;
     padding: 10px;
-  }
+    text-align: center;
+}
 
-  .content-box h2 {
-    font-size: 1.1rem;
-  }
+/* Personality Test Styling */
+h2 {
+    margin-top: 30px;
+}
 
-  .content-box p,
-  .content-box li {
-    font-size: 0.9rem;
-  }
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
 
-  .button-container button {
-    font-size: 0.85rem;
-  }
+li {
+    margin-bottom: 10px;
+}
+
+/* Non-Scrollable Layout */
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .form-container {
+        max-width: 90%;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"] {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 350px) {
+    input[type="text"],
+    input[type="date"],
+    input[type="email"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 450px) {
+    .form-container {
+        max-width: 80%;
+    }
 }
