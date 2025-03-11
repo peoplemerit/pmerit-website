@@ -1,156 +1,153 @@
-/* General Styles */
+/* ---------------------------------------
+   Make page non-scrollable
+----------------------------------------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Hide scrollbars */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f3f4f6;
+  font-family: sans-serif;
+  /* Background image for the entire page */
+  background: url("https://images.unsplash.com/photo-1465146633011-14fbaab74493") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Sticky Header */
-.sticky {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #ffffff;
+/* ---------------------------------------
+   Header and Footer
+----------------------------------------- */
+header, footer {
+  flex: 0 0 auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
 }
 
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Center the nav links horizontally */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.site-title {
-    color: #1e3a8a;
-    font-size: 24px;
-    margin: 0;
+nav li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
-/* Navigation Styles */
-.nav {
-    display: flex;
-    align-items: center;
+nav a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #1e3a8a;
+nav a:hover {
+  text-decoration: underline;
 }
 
-.nav-links {
-    display: flex;
-    gap: 15px;
+/* ---------------------------------------
+   Main Content
+----------------------------------------- */
+main {
+  flex: 1 1 auto;
+  overflow: hidden; /* Prevent scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content boxes horizontally */
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #1e3a8a;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
+/* 
+   A reusable class for content sections 
+   (Mission, AI Tutor, Personality, etc.)
+*/
+.content-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 80%;
+  max-width: 600px;
+  margin: 10px 0;         /* Spacing between boxes */
+  padding: 15px;          /* Inner spacing */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;     /* Center text inside the box */
 }
 
-.nav-links a:hover {
-    color: #142c6b;
+.content-box h2 {
+  margin-top: 0;          /* Remove default top margin */
+  font-size: 1.25rem;
+  color: #333;
 }
 
-/* Mobile Navigation Styles */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fff;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
-    .nav-links.active {
-        display: flex;
-    }
+.content-box p,
+.content-box li {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #444;
 }
 
-/* Language Switcher */
-.language-switcher {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-    margin-left: 10px;
+/* 
+   For the <iframe> inside the AI Tutor box
+   (width is 100% set inline, so only height here)
+*/
+.content-box iframe {
+  display: block;
+  margin: 10px auto 0 auto; /* Slight spacing above the iframe */
 }
 
-.language-switcher:focus {
-    outline: none;
-    border-color: #1e3a8a;
+/* ---------------------------------------
+   Button Container
+----------------------------------------- */
+.button-container {
+  text-align: center;
+  margin: 10px;
 }
 
-/* AI Help Button */
-.ai-help-btn {
-    background-color: #1e3a8a;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
+.button-container button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.95rem;
 }
 
-.ai-help-btn:hover {
-    background-color: #142c6b;
+.button-container button:hover {
+  background-color: #2980b9;
 }
 
-/* AI Panel Styles */
-.ai-panel {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 300px;
-    margin: 20px auto;
+/* ---------------------------------------
+   Footer
+----------------------------------------- */
+footer p {
+  margin: 0;
+  font-size: 0.85rem;
 }
 
-.hidden {
-    display: none;
-}
-
-/* Search Box */
-#search-box {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 300px;
-    margin-bottom: 20px;
-}
-
-.footer {
-    text-align: center;
+/* ---------------------------------------
+   Responsive Tweaks
+----------------------------------------- */
+@media (max-width: 600px) {
+  .content-box {
+    width: 90%;
     padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
+  }
 
-.footer-links a {
-    margin: 0 5px;
-    color: #1e3a8a;
-    text-decoration: none;
-}
+  .content-box h2 {
+    font-size: 1.1rem;
+  }
 
-.footer-links a:hover {
-    text-decoration: underline;
+  .content-box p,
+  .content-box li {
+    font-size: 0.9rem;
+  }
+
+  .button-container button {
+    font-size: 0.85rem;
+  }
 }
